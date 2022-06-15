@@ -1,11 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 html, body {
+  display: flex;
+  
   height: 100%;
   width: 100%;
   margin: 0;
 
   font-family: roboto;
+}
+
+nav {
+  width: 10vw;
+  background: #D2B291;
+}
+
+.navIcon {
+  width: calc(10vw - 4px);
+  height: calc(10vw - 4px);
+  background: #B88E4B;
+  border: #191919 solid 2px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+
+  overflow-y: scroll;
 }
 
 .page {
