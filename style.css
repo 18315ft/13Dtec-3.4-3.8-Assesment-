@@ -1,4 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
 html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+
+  font-family: roboto;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+}
+
+
+#landingPage {
+  background: #DAB46F;
+}
+#menuPage {
+  background: #307382;
+}
+#reviewsPage {
+  background: #DAB46F;
+}
+#baristaPage {
+  background: #307382;
 }
