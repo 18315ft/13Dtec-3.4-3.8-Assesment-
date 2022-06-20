@@ -10,12 +10,17 @@ html, body {
   font-family: roboto;
 }
 
+h1 {
+  margin: 0;
+}
+
 nav {
   width: 10vw;
   background: #D2B291;
 }
 
 .navIcon {
+  display: block;
   width: calc(10vw - 4px);
   height: calc(10vw - 4px);
   background: #B88E4B;
@@ -27,6 +32,7 @@ main {
   height: 100%;
 
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .page {
