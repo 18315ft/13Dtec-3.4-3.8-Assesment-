@@ -30,6 +30,29 @@ nav {
   height: calc(min(10vw, calc(100vh / 8)) - 4px);
   background: #FFD0A3;
   border: #191919 solid 2px;
+
+  animation-fill-mode: both;
+  animation-duration: 0.2s;
+  animation-direction: normal;
+}
+
+
+@keyframes fadeIn {
+  from {
+    background: #FFD0A3;
+  }
+  to {
+    background: #FFA857;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    background: #FFA857;
+  }
+  to {
+    background: #FFD0A3;
+  }
 }
 
 main {
