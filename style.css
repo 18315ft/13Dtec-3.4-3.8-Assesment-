@@ -12,6 +12,11 @@ html, body {
 
 h1 {
   margin: 0;
+  padding-top: 20px;
+  font-size: 90px;
+  color: #D2B291;
+  font-weight: 300;
+  text-align: center;
 }
 
 nav {
@@ -42,14 +47,28 @@ main {
 
 
 #landingPage {
-  background: #FFA74F;
+  background: #ffca89;
 }
 #menuPage {
   background: #307382;
 }
 #reviewsPage {
-  background: #FFA74F;
+  background: #ffca89;
 }
 #baristaPage {
   background: #307382;
+}
+
+
+#h_landing {
+  color: #3D99B1;
+}
+#h_menu {
+  color: #ffca89;
+}
+#h_reviews {
+  color: #3D99B1;
+}
+#h_barista {
+  color: #ffca89;
 }
