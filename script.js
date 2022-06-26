@@ -31,4 +31,5 @@ function displayCurrentPage() {
     dis -= pages[x].clientHeight;
   }
 }
-
+// Running the function
+displayCurrentPage();
