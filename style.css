@@ -24,8 +24,13 @@ nav {
   background: #B37F4F;
 }
 
+img {
+  height: 100vh;
+}
+
 .navIcon {
   display: block;
+  position: relative;
   width: calc(min(10vw, calc(100vh / 8)) - 4px);
   height: calc(min(10vw, calc(100vh / 8)) - 4px);
   background: #FFD0A3;
