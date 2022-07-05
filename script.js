@@ -1,3 +1,6 @@
+var slidePosition = 0;
+
+
 /**
  * @Function displayCurrentPage
  * @Param {number} _input = the grid button clicked
@@ -34,12 +37,31 @@ function displayCurrentPage() {
 // Running the function
 displayCurrentPage();
 
+/**
+ * @Function slideIn
+ * @Param {number} _index = The slide to show
+ *
+ * Slides in the slide at _index and slides out all other slides
+ */
 function slideIn(_index) {
+  // Slides
   var slides = document.getElementsByClassName("slideItem");
 
+  // Making all the slides slide out
   for (var x = 0; x < slides.length; x++) {
-    console.log(x);
     slides[x].style.animationName = "slideOut";
   }
+  // Changing slide[_index] to slide in
   slides[_index].style.animationName = "slideIn";
 }
+
+function slideNext() {
+  slidePosition++;
+  if (slidePosition == document.getElementsByClassName("slideItem").length) {
+    slidePosition = 0;
+  }
+  
+  slideIn(slidePosition);
+}
+
+setInterval(slideNext, 3000);
