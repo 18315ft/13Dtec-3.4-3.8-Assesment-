@@ -33,3 +33,13 @@ function displayCurrentPage() {
 }
 // Running the function
 displayCurrentPage();
+
+function slideIn(_index) {
+  var slides = document.getElementsByClassName("slideItem");
+
+  for (var x = 0; x < slides.length; x++) {
+    console.log(x);
+    slides[x].style.animationName = "slideOut";
+  }
+  slides[_index].style.animationName = "slideIn";
+}
