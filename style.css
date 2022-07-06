@@ -118,12 +118,13 @@ main {
   overflow: hidden;
   
   animation-fill-mode: both;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-direction: normal;
 }
 .slideImg {
-  height: 100vh;
-/*   position: absolute; */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*-----------------------------------------------------*/

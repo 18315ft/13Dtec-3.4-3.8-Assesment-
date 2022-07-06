@@ -55,6 +55,11 @@ function slideIn(_index) {
   slides[_index].style.animationName = "slideIn";
 }
 
+/**
+ * @Function slideNext
+ *
+ * Slides in next slide
+ */
 function slideNext() {
   slidePosition++;
   if (slidePosition == document.getElementsByClassName("slideItem").length) {
@@ -64,4 +69,4 @@ function slideNext() {
   slideIn(slidePosition);
 }
 
-setInterval(slideNext, 3000);
+setInterval(slideNext, 5000);
