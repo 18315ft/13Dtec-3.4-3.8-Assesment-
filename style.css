@@ -103,6 +103,8 @@ main {
 }
 #h_landing {
   color: #3D99B1;
+  position: relative;
+  z-index: 1;
 }
 #d_slideContainer {
   position: absolute;
@@ -118,13 +120,17 @@ main {
   overflow: hidden;
   
   animation-fill-mode: both;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-direction: normal;
 }
 .slideImg {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+.slideButton {
+  position: absolute;
+  z-index: 1;
 }
 
 /*-----------------------------------------------------*/

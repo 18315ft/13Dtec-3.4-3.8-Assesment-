@@ -69,4 +69,4 @@ function slideNext() {
   slideIn(slidePosition);
 }
 
-setInterval(slideNext, 5000);
+setInterval(slideNext, 8000);
