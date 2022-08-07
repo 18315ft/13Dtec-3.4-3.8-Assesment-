@@ -128,9 +128,27 @@ main {
   width: 100%;
   object-fit: cover;
 }
+
 .slideButton {
   position: absolute;
   z-index: 1;
+
+  border-radius: 100%;
+  border-color: #28CFCA;
+  border-style: solid;
+  border-width: 10px;
+  
+  width: 100px;
+  height: 100px;
+  font-size: 80px;
+  background: #95FFED;
+}
+
+#b_slideLeft {
+  left: 10px;
+}
+#b_slideRight {
+  right: 10px;
 }
 
 /*-----------------------------------------------------*/

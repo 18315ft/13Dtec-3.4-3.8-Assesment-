@@ -62,10 +62,22 @@ function slideIn(_index) {
  */
 function slideNext() {
   slidePosition++;
-  if (slidePosition == document.getElementsByClassName("slideItem").length) {
+  if (slidePosition >= document.getElementsByClassName("slideItem").length) {
     slidePosition = 0;
   }
-  
+  slideIn(slidePosition);
+}
+
+/**
+ * @Function slideNext
+ *
+ * Slides in next slide
+ */
+function slidePrev() {
+  slidePosition--;
+  if (slidePosition < 0) {
+    slidePosition = document.getElementsByClassName("slideItem").length;
+  }
   slideIn(slidePosition);
 }
 
