@@ -30,33 +30,15 @@ function displayCurrentPage() {
     } else {
       icons[x + 1].style.animationName = "fadeOut";
     }
-    
+
     dis -= pages[x].clientHeight;
   }
 }
 // Running the function
 displayCurrentPage();
 
-function slideTo(_slide) {
-  
-}
-
-/**
- * @Function slideIn
- * @Param {number} _index = The slide to show
- *
- * Slides in the slide at _index and slides out all other slides
- */
-function slideIn(_index) {
-  // Slides
-  var slides = document.getElementsByClassName("slideItem");
-
-  // Making all the slides slide out
-  for (var x = 0; x < slides.length; x++) {
-    slides[x].style.animationName = "slideOut";
-  }
-  // Changing slide[_index] to slide in
-  slides[_index].style.animationName = "slideIn";
+function slideTo(_index) {
+  document.getElementById("d_slideContainer").style.left = _index * -100 + "%";
 }
 
 /**
@@ -69,7 +51,7 @@ function slideNext() {
   if (slidePosition >= document.getElementsByClassName("slideItem").length) {
     slidePosition = 0;
   }
-  slideIn(slidePosition);
+  slideTo(slidePosition);
 }
 
 /**
@@ -82,7 +64,7 @@ function slidePrev() {
   if (slidePosition < 0) {
     slidePosition = document.getElementsByClassName("slideItem").length - 1;
   }
-  slideIn(slidePosition);
+  slideTo(slidePosition);
 }
 
-setInterval(slideNext, 8000);
+setInterval(slideNext, 4000);
