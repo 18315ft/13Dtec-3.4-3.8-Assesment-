@@ -13,7 +13,7 @@ function displayCurrentPage() {
   var dis = document.getElementById("main").scrollTop;
   // All of the page elements
   const pages = document.getElementsByTagName("section");
-  const icons = document.getElementsByClassName("navIcon");
+  const icons = document.getElementsByClassName("navItem");
 
   // Running through all the pages
   // If dis < the current pages height, that means that this is
@@ -36,6 +36,10 @@ function displayCurrentPage() {
 }
 // Running the function
 displayCurrentPage();
+
+function slideTo(_slide) {
+  
+}
 
 /**
  * @Function slideIn
@@ -76,7 +80,7 @@ function slideNext() {
 function slidePrev() {
   slidePosition--;
   if (slidePosition < 0) {
-    slidePosition = document.getElementsByClassName("slideItem").length;
+    slidePosition = document.getElementsByClassName("slideItem").length - 1;
   }
   slideIn(slidePosition);
 }

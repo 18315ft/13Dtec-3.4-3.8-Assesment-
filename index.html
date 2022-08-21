@@ -5,17 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
+  <!-- Bootstrap CSS -->
+<!--   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"> -->
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script defer src="script.js"></script>
 </head>
 
 <body>
   <nav>
-    <a class="navIcon" href="#landingPage"><img id="img_cornerLogo" src="images/HCHLogoSquare.png"></a>
-    <a class="navIcon" href="#landingPage"></a>
-    <a class="navIcon" href="#menuPage"></a>
-    <a class="navIcon" href="#reviewsPage"></a>
-    <a class="navIcon" href="#baristaPage"></a>
+    <a class="navItem" href="#landingPage"><img id="img_cornerLogo" src="images/HCHLogoSquare.png"></a>
+    <a class="navItem" href="#landingPage"><i class="navIcon bi bi-house"></i></a>
+    <a class="navItem" href="#menuPage"><i class="navIcon bi bi-menu-up"></i></a>
+    <a class="navItem" href="#reviewsPage"><i class="navIcon bi bi-star"></i></a>
+    <a class="navItem" href="#baristaPage"><i class="navIcon bi bi-people-fill"></i></a>
   </nav>
   
   <main id="main" onscroll="displayCurrentPage()">
@@ -24,8 +28,8 @@
     <!--******************************************-->
     <section id="landingPage" class="page">
       <h1 id="h_landing">THE HVHS<br>COFFEE HOUSE</h1>
-      <button id="b_slideLeft" class="slideButton" onclick="slidePrev()"><</button>
-      <button id="b_slideRight" class="slideButton" onclick="slideNext()">></button>
+      <button id="b_slideLeft" class="slideButton" onclick="slidePrev()"><i class="bi bi-caret-left-fill"></i></button>
+      <button id="b_slideRight" class="slideButton" onclick="slideNext()"><i class="bi bi-caret-right-fill"></i></button>
       <div id="d_slideContainer">
         <div class="slideItem"><img src="images/IMG_5712.jpg" class="slideImg"></div>
         <div class="slideItem"><img src="images/IMG_5719.jpg" class="slideImg"></div>
