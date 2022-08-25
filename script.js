@@ -1,5 +1,5 @@
 var slidePosition = 0;
-
+var slideInterval;
 
 /**
  * @Function displayCurrentPage
@@ -37,7 +37,14 @@ function displayCurrentPage() {
 // Running the function
 displayCurrentPage();
 
+function setUpSlide() {
+  document.getElementById("d_slideContainer").style.width = document.getElementsByClassName("slideItem").length * 100 + "%";
+}
+setUpSlide();
+
 function slideTo(_index) {
+  clearInterval(slideInterval);
+  slideInterval = setInterval(slideNext, 8000);
   document.getElementById("d_slideContainer").style.left = _index * -100 + "%";
 }
 
@@ -53,6 +60,7 @@ function slideNext() {
   }
   slideTo(slidePosition);
 }
+slideInterval = setInterval(slideNext, 8000);
 
 /**
  * @Function slideNext
@@ -67,4 +75,14 @@ function slidePrev() {
   slideTo(slidePosition);
 }
 
-setInterval(slideNext, 4000);
+
+function updateIconSizes() {
+  // bi is bootstap icon (I think)
+  var icons = document.getElementsByClassName("bi");
+
+  for (var x = 0; x < icons.length; x++) {
+    icons[x].style.fontSize = icons[x].clientHeight * 0.9 + "px";
+  }
+}
+
+setInterval(updateIconSizes, 16);

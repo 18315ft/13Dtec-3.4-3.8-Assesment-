@@ -133,7 +133,6 @@ main {
   position: absolute;
   overflow: hidden;
   top: 0;
-  width: 400%;
   height: 100%;
   left: 0%;
   transition: left 3s;
@@ -172,29 +171,9 @@ main {
   right: 10px;
 }
 
-/*-----------------------------------------------------*/
-/*- Animation for landing page slideshow to slide in --*/
-/*-----------------------------------------------------*/
-/* @keyframes slideIn {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0%;
-  }
+#b_scrollDown {
+  bottom: 10px;
 }
- */
-/*-----------------------------------------------------*/
-/*- Animation for landing page slideshow to slide out -*/
-/*-----------------------------------------------------*/
-/* @keyframes slideOut {
-  from {
-    right: 0%;
-  }
-  to {
-    right: 100%;
-  }
-} */
 
 /*-----------------------------------------------------*/
 /*- Menu Page -----------------------------------------*/
