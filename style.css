@@ -21,13 +21,13 @@ h1 {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 /*-----------------------------------------------------*/
 /*- Nav Bar -------------------------------------------*/
 /*-----------------------------------------------------*/
 nav {
-  width: min(10vw, calc(100vh / 8));
   background: #B37F4F;
 }
 
@@ -37,8 +37,8 @@ nav {
 .navItem {
   display: flex;
   position: relative;
-  width: calc(min(10vw, calc(100vh / 8)) - 4px);
-  height: calc(min(10vw, calc(100vh / 8)) - 4px);
+  width: calc(min(7vw, calc(100vh / 8)) - 4px);
+  height: calc(min(7vw, calc(100vh / 8)) - 4px);
   background: #FFD0A3;
   border: #191919 solid 2px;
 
@@ -173,6 +173,7 @@ main {
 
 #b_scrollDown {
   bottom: 10px;
+  transition: opacity 0.3s;
 }
 
 /*-----------------------------------------------------*/

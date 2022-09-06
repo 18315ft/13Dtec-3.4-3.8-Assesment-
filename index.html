@@ -22,7 +22,7 @@
     <a class="navItem" href="#baristaPage"><i class="navIcon bi bi-people-fill"></i></a>
   </nav>
   
-  <main id="main" onscroll="displayCurrentPage()">
+  <main id="main" onscroll="updatePage()">
     <!--******************************************-->
     <!-- Landing page -->
     <!--******************************************-->
@@ -32,8 +32,8 @@
                 <i class="bi bi-caret-left-fill"></i></button>
       <button id="b_slideRight" class="slideButton" onclick="slideNext()">
                 <i class="bi bi-caret-right-fill"></i></button>
-      <button id="b_scrollDown" class="slideButton" href="#menuPage">
-                <i class="bi bi-caret-down-fill"></i></button>
+      <a id="b_scrollDown" class="slideButton" href="#menuPage">
+                <i class="bi bi-caret-down-fill"></i></a>
       <div id="d_slideContainer">
         <div class="slideItem"><img src="images/IMG_5712.jpg" class="slideImg"></div>
         <div class="slideItem"><img src="images/IMG_5719.jpg" class="slideImg"></div>
