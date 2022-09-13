@@ -210,7 +210,7 @@ main {
 
 #d_coffeePopup {
   position: fixed;
-  display: none;
+  opacity: 0;
   margin: 10%;
 }
 

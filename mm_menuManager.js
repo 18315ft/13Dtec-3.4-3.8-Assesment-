@@ -42,7 +42,7 @@ function createCoffeeMenuCards() {
     var cardElmt = document.createElement("div");
     cardElmt.id = "d_" + x;
     cardElmt.classList.add("coffeeCard");
-    cardElmt.addEventListener("click", () => console.log("clicked"));
+    cardElmt.addEventListener("click", displayCoffeePopup);
     cardElmt.setAttribute("coffeeName", x);
     
     // Creating and adding the svg element to the card element
