@@ -42,12 +42,10 @@ nav {
   position: relative;
   width: calc(min(7vw, calc(100vh / 8)) - 4px);
   height: calc(min(7vw, calc(100vh / 8)) - 4px);
-  background: #FFD0A3;
   border: #191919 solid 2px;
-
-  animation-fill-mode: both;
-  animation-duration: 0.2s;
-  animation-direction: normal;
+  
+  transition: background 0.2s;
+  background: #FFD0A3;
 }
 
 .navToolTip {
@@ -81,30 +79,6 @@ nav {
 #img_cornerLogo {
   width: 100%;
   height: 100%;
-}
-
-/*-----------------------------------------------------*/
-/*- Animation for nav bar icon to fade in -------------*/
-/*-----------------------------------------------------*/
-@keyframes fadeIn {
-  from {
-    background: #FFD0A3;
-  }
-  to {
-    background: #FFA857;
-  }
-}
-
-/*-----------------------------------------------------*/
-/*- Animation for nav bar icon to fade out ------------*/
-/*-----------------------------------------------------*/
-@keyframes fadeOut {
-  from {
-    background: #FFA857;
-  }
-  to {
-    background: #FFD0A3;
-  }
 }
 
 /*-----------------------------------------------------*/

@@ -72,9 +72,9 @@ function updatePage() {
     if (dis + window.innerHeight / 4 < pages[x].clientHeight && dis + window.innerHeight / 4 > 0) {
       // Sets the nav icon for the page to be a different colour. The x + 1 is because the
       //  first icon is going to be the logo and so won't be highlighted
-      icons[x + 1].style.animationName = "fadeIn";
+      icons[x + 1].style.background = "#FFA857";
     } else {
-      icons[x + 1].style.animationName = "fadeOut";
+      icons[x + 1].style.background = "#FFD0A3";
     }
 
     dis -= pages[x].clientHeight;
