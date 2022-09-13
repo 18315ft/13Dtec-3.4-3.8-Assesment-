@@ -93,7 +93,7 @@ updatePage();
 function updateIconSizes() {
   // bi is bootstap icon (I think)
   var icons = document.getElementsByClassName("bi");
-  var buttons = document.getElementsByClassName("slideButton");
+  var buttons = document.getElementsByClassName("resizeButton");
 
   for (var x = 0; x < icons.length; x++) {
     icons[x].style.fontSize = icons[x].clientHeight * 0.9 + "px";
