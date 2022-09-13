@@ -31,6 +31,7 @@ nav {
   background: #B37F4F;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 /*-----------------------------------------------------*/
@@ -47,6 +48,18 @@ nav {
   animation-fill-mode: both;
   animation-duration: 0.2s;
   animation-direction: normal;
+}
+
+.navToolTip {
+  position: absolute;
+  opacity: 0;
+  left: 100%;
+  background: #FFD0A3;
+  transition: opacity 0.3s;
+}
+
+.navItem:hover > .navToolTip {
+  opacity: 1;
 }
 
 .navIcon {
