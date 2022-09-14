@@ -75,15 +75,19 @@
       <h1 id="h_barista">BARISTA TRAINING</h1>
     </section>
   </main>
-  <div id="d_coffeePopup">
-    <svg id="svg_coffeePopupSVG"></svg>
-    <p id="p_coffeePopupName"></p>
-    <select id="sel_coffeePopupSize" name="size">
-        <option value="large">Large: $4</option>
-        <option value="small">Small: $3</option>
-      </select> 
-    <button id="b_coffeePopupAdd">Add to order</button>
+  <div id="d_coffeePopupBackground">
+    <div id="d_coffeePopup">
+      <svg id="svg_coffeePopupSVG"></svg>
+      <p id="p_coffeePopupName"></p>
+      <select id="sel_coffeePopupSize" name="size">
+          <option value="large">Large: $4</option>
+          <option value="small">Small: $3</option>
+        </select> 
+      <button id="b_coffeePopupAdd">Add to order</button>
+    </div>
   </div>
 </body>
 
 </html>
+
+<!-- Changed css and js to make coffee popup not interfere with scrolling when opacity 0. Also added in background element to prevent  scrolling when coffee popup is active -->

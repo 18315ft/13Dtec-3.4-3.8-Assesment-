@@ -25,7 +25,9 @@ function displayCoffeePopup(_event) {
   document.getElementById("b_coffeePopupAdd").setAttribute("coffee", coffeeName);
 
   // Displaying
-  document.getElementById("d_coffeePopup").style.opacity = 1;
+  document.getElementById("d_coffeePopupBackground").style.display = "block";
+  // Current method of changing opacity after the display. If they are changed at the same time, the  transition doesn't happen
+  setTimeout(() => document.getElementById("d_coffeePopupBackground").style.opacity = 1, 0);
 }
 
 function addToOrder(_event) {
