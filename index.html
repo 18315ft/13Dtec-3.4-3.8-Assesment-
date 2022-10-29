@@ -20,16 +20,16 @@
     <a class="navItem" href="#landingPage"><img id="img_cornerLogo" src="images/HCHLogoSquare.png">
       <p class="navToolTip">Home</p>
     </a>
-    <a class="navItem" href="#landingPage"><i class="navIcon bi bi-house-fill"></i>
+    <a class="navItem" href="#landingPage"><i class="navIcon autoScaleIcon bi  bi-house-fill"></i>
       <p class="navToolTip">Home</p>
     </a>
-    <a class="navItem" href="#menuPage">   <i class="navIcon bi bi-cup-hot-fill"></i>
+    <a class="navItem" href="#menuPage">   <i class="navIcon autoScaleIcon bi bi-cup-hot-fill"></i>
       <p class="navToolTip">Menu</p>
     </a>
-    <a class="navItem" href="#reviewsPage"><i class="navIcon bi bi-star-fill"></i>
+    <a class="navItem" href="#reviewsPage"><i class="navIcon autoScaleIcon bi bi-star-fill"></i>
       <p class="navToolTip">Reviews</p>
     </a>
-    <a class="navItem" href="#baristaPage"><i class="navIcon bi bi-people-fill"></i>
+    <a class="navItem" href="#baristaPage"><i class="navIcon autoScaleIcon bi bi-people-fill"></i>
       <p class="navToolTip">Barista program</p>
     </a>
   </nav>
@@ -43,7 +43,7 @@
       <div id="b_slideLeft" class="slideButton" onclick="slidePrev()"></div>
       <div id="b_slideRight" class="slideButton" onclick="slideNext()"></div>
       <a id="b_scrollDown" class="resizeButton" href="#menuPage">
-                <i class="bi bi-caret-down-fill"></i></a>
+                <i class="autoScaleIcon bi bi-caret-down-fill"></i></a>
       <div id="d_slideContainer">
         <div class="slideItem"><img src="images/IMG_5712.jpg" class="slideImg"></div>
         <div class="slideItem"><img src="images/IMG_5719.jpg" class="slideImg"></div>
@@ -77,17 +77,25 @@
   </main>
   <div id="d_coffeePopupBackground">
     <div id="d_coffeePopup">
-      <svg id="svg_coffeePopupSVG"></svg>
-      <p id="p_coffeePopupName"></p>
-      <select id="sel_coffeePopupSize" name="size">
-          <option value="large">Large: $4</option>
-          <option value="small">Small: $3</option>
-        </select> 
-      <button id="b_coffeePopupAdd">Add to order</button>
+      <!-- Coffee options and name -->
+      <div id="d_coffeePopupOptions" class="coffeePopupSection">
+        <i id="i_coffeePopupClose" class="bi-x-circle"></i>
+        <p id="p_coffeePopupName"></p>
+        <select id="sel_coffeePopupSize" name="size">
+          <option value="l">Large: $4</option>
+          <option value="s">Small: $3</option>
+        </select>
+      </div>
+      
+      <!-- Coffee SVG -->
+      <svg id="svg_coffeePopupSVG" class="coffeePopupSection"></svg>
+      <!-- Add to order -->
+      <div id="d_coffeePopupButtons" class="coffeePopupSection">
+        <button id="b_coffeePopupAdd" class="coffeePopupButton">Add to order</button>
+        <button id="b_coffeePopupCheckout" class="coffeePopupButton">Check out</button>
+      </div>
     </div>
   </div>
 </body>
 
 </html>
-
-<!-- Changed css and js to make coffee popup not interfere with scrolling when opacity 0. Also added in background element to prevent  scrolling when coffee popup is active -->
