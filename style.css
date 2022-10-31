@@ -56,7 +56,7 @@ nav {
   opacity: 0;
   left: 100%;
   background: #FFD0A3;
-  transition: opacity 0.3s;
+/*   transition: opacity 0.3s; */
 }
 
 .navItem:hover > .navToolTip {
@@ -182,6 +182,7 @@ main {
 #menuPage {
   height: auto;
   background: #307382;
+  position: relative;
 }
 #h_menu {
   color: #ffca89;
@@ -281,8 +282,8 @@ main {
   color: black;
   
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
 }
 
 #p_coffeePopupName {
@@ -319,6 +320,43 @@ main {
   margin: 0 10px;
 }
 
+#d_shoppingCartTrack {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height:100%;
+}
+
+#d_shoppingCart {
+  display: none;
+  position: sticky;
+  top: 0;
+  width: 55px;
+  height: 55px;
+  padding: 22px;
+  margin: 10px;
+  background: white;
+  border-radius: 100%;
+}
+
+#p_shoppingCartCount {
+  position: relative;
+  left: -10px;
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: white;
+  background: red;
+  border-radius: 100%;
+
+}
+
 /*-----------------------------------------------------*/
 /*- Reviews Page --------------------------------------*/
 /*-----------------------------------------------------*/
@@ -333,10 +371,123 @@ main {
 /*- Barista Page --------------------------------------*/
 /*-----------------------------------------------------*/
 #baristaPage {
-  background: #307382;
+  background: #ffca89;
 }
 #h_barista {
-  color: #ffca89;
+  color: #3D99B1;
+}
+
+#d_orderingPage {
+  display: none;
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: #eceeef;
+  z-index: 1;
+}
+
+#d_orderingPageCentre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: fit-content;
+  height: 100%;
+  
+  margin: auto;
+  padding: 0 70px;
+  
+  background:  #307382;
+  box-shadow: 0px 0px 10px #b3b3b3;
+}
+
+#d_orderingPageList {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1em;
+}
+
+.orderingPageListItem {
+  display: grid;
+  background: white;
+  grid-template-areas:
+      "name options"
+      "svg options";
+  border-radius: 1em;
+  margin-bottom: 2em;
+  padding: 1em;
+  height: 200px;
+}
+
+.orderingPageListName {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.orderingPageListRemove {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.orderingPageListSave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#d_orderingPageButtons {
+  display: grid;
+  
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#d_pickupTimeWrapper {
+  width: 100%;
+}
+
+.pickupTimeLabel {
+  color: white;
+}
+
+#b_orderingPageReset {
+  font-size: 1.25em;
+  color: white;
+  background: none;
+  border: none;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+#b_orderingPageOrder {
+  padding: 0.5em;
+  font-size: 1.25em;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  background: #4dc772;
+  color: white;
+}
+
+#p_orderingPagePrice {
+  margin: 0;
+  display: inline;
+}
+
+#b_orderingPageBack {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  
+  font-size: 2em;
+  
+  background: none;
+  border: none;
 }
 
 

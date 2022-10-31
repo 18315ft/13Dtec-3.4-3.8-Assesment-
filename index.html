@@ -10,6 +10,15 @@
   <!-- Bootstrap Font Icon CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- firebase start **************************************-->
+  <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script> 
+  <!-- firebase end ****************************************-->
+  <script defer src="fb_io.js"></script>
   <script defer src="im_interfaceManager.js"></script>
   <script defer src="or_orderManager.js"></script>
   <script defer src="mm_menuManager.js"></script>
@@ -26,14 +35,17 @@
     <a class="navItem" href="#menuPage">   <i class="navIcon autoScaleIcon bi bi-cup-hot-fill"></i>
       <p class="navToolTip">Menu</p>
     </a>
-    <a class="navItem" href="#reviewsPage"><i class="navIcon autoScaleIcon bi bi-star-fill"></i>
+<!--     <a class="navItem" href="#reviewsPage"><i class="navIcon autoScaleIcon bi bi-star-fill"></i>
       <p class="navToolTip">Reviews</p>
-    </a>
+    </a> -->
     <a class="navItem" href="#baristaPage"><i class="navIcon autoScaleIcon bi bi-people-fill"></i>
       <p class="navToolTip">Barista program</p>
     </a>
   </nav>
   
+  <!--**********************************************************************************************-->
+  <!-- Main -->
+  <!--**********************************************************************************************-->
   <main id="main" onscroll="updatePage()">
     <!--******************************************-->
     <!-- Landing page -->
@@ -56,6 +68,12 @@
     <!-- Menu page -->
     <!--******************************************-->
     <section id="menuPage" class="page">
+      <div id="d_shoppingCartTrack">
+        <div id="d_shoppingCart">
+          <i class="bi bi-cart-fill autoScaleIcon"></i>
+          <p id="p_shoppingCartCount">0</p>
+        </div>
+      </div>
       <h1 id="h_menu">MENU</h1>
       <div id="d_menuList">
       </div>
@@ -64,9 +82,9 @@
     <!--******************************************-->
     <!-- Reviews page -->
     <!--******************************************-->
-    <section id="reviewsPage" class="page">
+<!--     <section id="reviewsPage" class="page">
       <h1 id="h_reviews">REVIEWS</h1>
-    </section>
+    </section> -->
     
     <!--******************************************-->
     <!-- Barista page -->
@@ -75,6 +93,9 @@
       <h1 id="h_barista">BARISTA TRAINING</h1>
     </section>
   </main>
+  <!--**********************************************************************************************-->
+  <!-- CoffeePopup -->
+  <!--**********************************************************************************************-->
   <div id="d_coffeePopupBackground">
     <div id="d_coffeePopup">
       <!-- Coffee options and name -->
@@ -84,7 +105,8 @@
         <select id="sel_coffeePopupSize" name="size">
           <option value="l">Large: $4</option>
           <option value="s">Small: $3</option>
-        </select>
+        </select><br>
+        <input id="i_coffeePopupAlterations" type="text" placeholder="Note to barista eg. Decaf"></input>
       </div>
       
       <!-- Coffee SVG -->
@@ -93,6 +115,38 @@
       <div id="d_coffeePopupButtons" class="coffeePopupSection">
         <button id="b_coffeePopupAdd" class="coffeePopupButton">Add to order</button>
         <button id="b_coffeePopupCheckout" class="coffeePopupButton">Check out</button>
+      </div>
+    </div>
+  </div>
+  
+  <!--**********************************************************************************************-->
+  <!-- Ordering page -->
+  <!--**********************************************************************************************-->
+  <div id="d_orderingPage">
+    <button id="b_orderingPageBack" onclick="document.getElementById('d_orderingPage').style.display = 'none'"><i class="bi-arrow-left"></i> Back</button>
+
+    <div id="d_orderingPageCentre">
+      <h1 id="h_checkout">CHECKOUT</h1>
+      <div id="d_orderingPageList">
+      </div>
+
+      
+      <!-- Pickup time -->
+      <div id="d_pickupTimeWrapper">
+        <label class="pickupTimeLabel">Pickup time</label>
+        <input id="i_pickupTime" type="time"><br>
+        <label class="pickupTimeLabel">Pickup day</label>
+        <select id="sel_pickupDay">
+          <option value="mon">Monday</option>
+          <option value="tues">Tuesday</option>
+          <option value="wed">Wednesday</option>
+          <option value="thu">Thursday</option>
+          <option value="fri">Friday</option>
+        </select>
+      </div>
+      <div id="d_orderingPageButtons">
+        <button id="b_orderingPageReset" onclick="resetOrder()"><i class="bi-arrow-clockwise"></i>Clear order</button>
+        <button id="b_orderingPageOrder" onclick="placeOrder()"><p id="p_orderingPagePrice"></p> Place order</button>
       </div>
     </div>
   </div>
