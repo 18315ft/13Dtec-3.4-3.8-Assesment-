@@ -374,6 +374,7 @@ main {
 /*-----------------------------------------------------*/
 #baristaPage {
   background: #ffca89;
+  height: auto;
 }
 #h_barista {
   color: #3D99B1;
@@ -386,7 +387,6 @@ main {
 
 #d_baristaPageImages {
   display: flex;
-  
 }
 
 .d_baristaTrainingImageWrapper {
@@ -535,6 +535,11 @@ main {
   .coffeeCard {
     margin: 20px 5%;
     flex-grow: 0.3;
+  }
+
+  
+  #d_baristaPageImages {
+    flex-wrap: wrap;
   }
 
   #d_coffeePopup {
