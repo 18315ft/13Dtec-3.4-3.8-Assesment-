@@ -265,7 +265,7 @@ main {
   border-style: solid;
   border-collapse: collapse;
   border-color: #b5b5b5;
-  padding: 16px;
+  padding: 1em;
 }
 
 #svg_coffeePopupSVG {
@@ -303,7 +303,7 @@ main {
   
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 30px 0;
+  padding: 2em 0;
 
   border-top-style: none;
 }
@@ -508,24 +508,39 @@ main {
   }
   
   #d_menuList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: inherit;
     padding: 0;
   }
   .coffeeCard {
     margin: 20px 5%;
     flex-grow: 0.3;
-    padding: 20px;
-    width: max(25%, 100px);
-    border-radius: 20px;
-    display: grid;
+  }
+
+  #d_coffeePopup {
     grid-template-areas:
         "svg"
-        "name"
-        "addToOrder";
-    background: white;
+        "options"
+        "add";
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: auto;
+    height: 60%;
+  }
+
+  #svg_coffeePopupSVG {
+    width: -webkit-fill-available;
+  }
+
+  #d_coffeePopupOptions {
+    border-right-style: solid;
+    border-top-style: none;
+    
+  }
+
+  #d_coffeePopupButtons {
+    padding: 0.5em 0;
+  }
+
+  .coffeePopupSection {
+    padding: 0.5em;
   }
 }
 
