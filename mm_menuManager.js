@@ -96,7 +96,7 @@ function createCoffeeSVG(_coffee) {
   
   
   for (var x = 0; x < ratioArr.length; x += 2) {
-    var poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
     poly.setAttribute("points", getPoints(ratioArr[x-1], ratioArr[x+1], 0.9));
     poly.style = "fill:" + ratioArr[x];
     

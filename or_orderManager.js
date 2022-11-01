@@ -67,7 +67,7 @@ document.getElementById("i_coffeePopupClose").addEventListener("click", hideCoff
 
 // Making so that if you click on the coffee popup it doesn't close it,
 //  because clicking the popup is considered to be clicking the background as well
-document.getElementById("d_coffeePopup").addEventListener("click", (e) => {e.stopPropagation()});
+document.getElementById("d_coffeePopup").addEventListener("click", (e) => {e.stopPropagation();});
 
 /**
  * @Function addToOrder
@@ -168,11 +168,11 @@ function showCheckout() {
     // Large option
     var sizeLarge = document.createElement("option");
     sizeLarge.value = "l";
-    sizeLarge.textContent = "Large: $4"
+    sizeLarge.textContent = "Large: $4";
     // Small option
     var sizeSmall = document.createElement("option");
     sizeSmall.value = "s";
-    sizeSmall.textContent = "Small: $3"
+    sizeSmall.textContent = "Small: $3";
     // Appending options to select
     sizeSel.append(sizeLarge, sizeSmall);
     sizeSel.value = order[x].size;
@@ -236,17 +236,14 @@ function saveItemInOrder(_event) {
   var index = parseInt(_event.target.attributes.index.value);
   var arrIndex;
   for (var x in order) {
-    if (order[x].index = index) {
+    if (order[x].index == index) {
       arrIndex = x;
       break;
     }
   }
 
-  console.log(order[arrIndex].size)
-  console.log(document.getElementById("sel_size" + index).value);
   order[arrIndex].size = document.getElementById("sel_size" + index).value;
   order[arrIndex].alterations = document.getElementById("in_alterations" + index).value;
-  console.log(order[arrIndex].size)
   
   showCheckout();
 }
@@ -260,7 +257,7 @@ function resetOrder() {
   if (confirm("Are you sure that you want to reset your order?") == false) return;
   order = [];
   updateCartIcon();
-  document.getElementById('d_orderingPage').style.display = 'none'
+  document.getElementById('d_orderingPage').style.display = 'none';
 }
 
 /**
@@ -278,5 +275,7 @@ function placeOrder() {
 
   fb_write("orders/" + userDetails.uid, orderObj);
   
-  document.getElementById('d_orderingPage').style.display = 'none'
+  order = [];
+  updateCartIcon();
+  document.getElementById('d_orderingPage').style.display = 'none';
 }

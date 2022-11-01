@@ -503,6 +503,10 @@ main {
     width: calc(calc(100vw / 5) - 4px);
     height: calc(calc(100vw / 5) - 4px);
   }
+  
+  h1 {
+    font-size: 50px;
+  }
 
   #landingPage {
     height: calc(100vh - calc(100vw / 5) + 4px);
