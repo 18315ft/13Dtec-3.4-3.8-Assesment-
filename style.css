@@ -474,11 +474,6 @@ main {
   color: white;
 }
 
-#p_orderingPagePrice {
-  margin: 0;
-  display: inline;
-}
-
 #b_orderingPageBack {
   position: absolute;
   top: 1em;

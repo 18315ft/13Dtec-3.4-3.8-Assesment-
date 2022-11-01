@@ -95,11 +95,12 @@ function updateIconSizes() {
   var icons = document.getElementsByClassName("autoScaleIcon");
   var buttons = document.getElementsByClassName("resizeButton");
 
-  for (var x = 0; x < icons.length; x++) {
+  var x;
+  for (x = 0; x < icons.length; x++) {
     icons[x].style.fontSize = icons[x].clientHeight * 0.9 + "px";
   }
   
-  for (var x = 0; x < buttons.length; x++) {
+  for (x = 0; x < buttons.length; x++) {
     buttons[x].style.width = Math.min(buttons[x].parentElement.clientHeight, buttons[x].parentElement.clientWidth) * 0.1 + "px";
     buttons[x].style.height = Math.min(buttons[x].parentElement.clientHeight, buttons[x].parentElement.clientWidth) * 0.1 + "px";
   }
