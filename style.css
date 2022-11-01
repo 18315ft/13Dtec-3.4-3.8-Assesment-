@@ -378,6 +378,26 @@ main {
 #h_barista {
   color: #3D99B1;
 }
+#p_barista {
+  color: #448597;
+  padding: 1em 10vw;
+  font-size: 1.5em;
+}
+
+#d_baristaPageImages {
+  display: flex;
+  
+}
+
+.d_baristaTrainingImageWrapper {
+  flex-grow: 1;
+  padding: 2em;
+}
+
+.img_baristaTraining {
+  width:  100%;
+  object-fit: cover;
+}
 
 #d_orderingPage {
   display: none;
