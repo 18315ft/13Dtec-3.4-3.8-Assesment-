@@ -261,15 +261,17 @@ main {
 }
 
 .coffeePopupSection {
-  height: -webkit-fill-available;
   border-style: solid;
   border-collapse: collapse;
   border-color: #b5b5b5;
   padding: 1em;
 }
 
-#svg_coffeePopupSVG {
+#d_coffeePopupSVG {
   grid-area: svg;
+}
+#svg_coffeePopupSVG {
+  height: 100%;
 }
 
 #d_coffeePopupOptions {
@@ -523,10 +525,6 @@ main {
     grid-template-rows: 1fr auto auto;
     grid-template-columns: auto;
     height: 60%;
-  }
-
-  #svg_coffeePopupSVG {
-    width: -webkit-fill-available;
   }
 
   #d_coffeePopupOptions {

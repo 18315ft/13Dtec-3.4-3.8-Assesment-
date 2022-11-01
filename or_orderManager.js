@@ -4,7 +4,7 @@
 var order = [];
 const SIZEPRICES = {large: 4, small: 3};
 var currentItemAlterations;
-
+var thing;
 /**
  * @Function displayCoffeePopup
  * @Param {event} _event  = The event contains the type of coffee to be displayed
@@ -15,10 +15,15 @@ function displayCoffeePopup(_event) {
   // Getting the coffee name
   var coffeeName;
   // Looping the path until if finds the element with the coffeename attribute
-  for (var x = 0; x < _event.path.length; x++) {
-    if (_event.path[x].getAttribute("coffeename") != undefined) {
-      coffeeName = _event.path[x].getAttribute("coffeename");
-      break;
+  var gotName = false;
+  var elmt = _event.srcElement;
+  
+  while (!gotName) {
+    if (elmt.getAttribute("coffeename") != undefined) {
+      coffeeName = elmt.getAttribute("coffeename");
+      gotName = true;
+    } else {
+      elmt = elmt.parentElement;
     }
   }
   // Change svg
