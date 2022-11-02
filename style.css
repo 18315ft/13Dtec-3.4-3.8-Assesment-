@@ -116,10 +116,13 @@ main {
   overflow: hidden;
 }
 #h_landing {
-  color: #3D99B1;
+  color: #FFCA89;
+  background: #307382;
   position: absolute;
-  top: 0;
   z-index: 1;
+  padding: 0.125em;
+  border-radius: 0.4em;
+  top: 0.5em;
 }
 #d_slideContainer {
   display: flex;
@@ -218,7 +221,7 @@ main {
   font-weight: 600;
   border-radius: 5px;
   border: none;
-  background: #4dc772;
+  background: #2B823D;
   color: white;
 }
 
@@ -289,13 +292,12 @@ main {
 }
 
 #p_coffeePopupName {
-  display: inline;
   font-size: 1.5em;
+  margin: 0;
   text-decoration: underline;
 }
 
 #sel_coffeePopupSize {
-  display: block;
   grid-area: size;
   margin: auto 0;
 }
@@ -373,14 +375,14 @@ main {
 /*- Barista Page --------------------------------------*/
 /*-----------------------------------------------------*/
 #baristaPage {
-  background: #ffca89;
+  background: #FFD199;
   height: auto;
 }
 #h_barista {
-  color: #3D99B1;
+  color: #2B565F;
 }
 #p_barista {
-  color: #448597;
+  color: #2B565F;
   padding: 1em 10vw;
   font-size: 1.5em;
 }

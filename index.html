@@ -56,12 +56,14 @@
       <div id="b_slideLeft" class="slideButton" onclick="slidePrev()"></div>
       <div id="b_slideRight" class="slideButton" onclick="slideNext()"></div>
       <a id="b_scrollDown" class="resizeButton" href="#menuPage">
-                <i class="autoScaleIcon bi bi-caret-down-fill"></i></a>
+        <i class="autoScaleIcon bi bi-caret-down-fill"></i>
+        <p style="display: none">Scroll down</p>
+      </a>
       <div id="d_slideContainer">
-        <div class="slideItem"><img src="images/IMG_5712.jpg" class="slideImg" alt="Background image"></div>
-        <div class="slideItem"><img src="images/IMG_5719.jpg" class="slideImg" alt="Background image"></div>
-        <div class="slideItem"><img src="images/IMG_5721.jpg" class="slideImg" alt="Background image"></div>
-        <div class="slideItem"><img src="images/IMG_5723.jpg" class="slideImg" alt="Background image"></div>
+        <div class="slideItem"><img src="images/SlideImage1.jpg" class="slideImg" alt="Background image"></div>
+        <div class="slideItem"><img src="images/SlideImage2.jpg" class="slideImg" alt="Background image"></div>
+        <div class="slideItem"><img src="images/SlideImage3.jpg" class="slideImg" alt="Background image"></div>
+        <div class="slideItem"><img src="images/SlideImage4.jpg" class="slideImg" alt="Background image"></div>
       </div>
     </section>
     
@@ -94,8 +96,8 @@
       <h1 id="h_barista">BARISTA TRAINING</h1>
       <p id="p_barista">Here at the HVHS Coffee House we offer barista training to students to help them gain work experience and skills that they can use. Students can learn coffee making before school, as well as during interval. Learn to make coffee with an experienced mentor and interact with customers to get the essential hands on experience to enhance your customer service skills.</p>
       <div id="d_baristaPageImages">
-        <div class="d_baristaTrainingImageWrapper"><img src="images/IMG_4528.JPG" alt="Photo of coffee being made" class="img_baristaTraining"></div>
-        <div class="d_baristaTrainingImageWrapper"><img src="images/IMG_4561.JPG" alt="Photo of coffee being made" class="img_baristaTraining"></div>
+        <div class="d_baristaTrainingImageWrapper"><img src="images/BaristaTrainingImage1.jpg" alt="Photo of coffee being made" class="img_baristaTraining"></div>
+        <div class="d_baristaTrainingImageWrapper"><img src="images/BaristaTrainingImage2.jpg" alt="Photo of coffee being made" class="img_baristaTraining"></div>
       </div>
     </section>
   </main>
@@ -108,10 +110,12 @@
       <div id="d_coffeePopupOptions" class="coffeePopupSection">
         <i id="i_coffeePopupClose" class="bi-x-circle"></i>
         <p id="p_coffeePopupName"></p>
+        <label for="sel_coffeePopupSize">Size:</label>
         <select id="sel_coffeePopupSize" name="size">
           <option value="l">Large: $4</option>
           <option value="s">Small: $3</option>
-        </select>
+        </select><br>
+        <label for="i_coffeePopupAlterations">Note to barista:</label>
         <input id="i_coffeePopupAlterations" type="text" placeholder="Note to barista eg. Decaf">
       </div>
       
@@ -141,10 +145,10 @@
       
       <!-- Pickup time -->
       <div id="d_pickupTimeWrapper">
-        <label class="pickupTimeLabel">Pickup time</label>
-        <input id="i_pickupTime" type="time"><br>
-        <label class="pickupTimeLabel">Pickup day</label>
-        <select id="sel_pickupDay">
+        <label for="i_pickupTime" class="pickupTimeLabel">Pickup time</label>
+        <input name="pick up time" id="i_pickupTime" type="time"><br>
+        <label for="sel_pickupDay" class="pickupTimeLabel">Pickup day</label>
+        <select name="pick up day" id="sel_pickupDay">
           <option value="mon">Monday</option>
           <option value="tues">Tuesday</option>
           <option value="wed">Wednesday</option>
